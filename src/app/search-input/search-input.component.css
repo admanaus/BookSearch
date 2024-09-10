@@ -1,12 +1,12 @@
 .example-card {
-    max-width: 400px;
-  }
-  
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
+    min-width: 400px;
   }
 
   .padding {
     padding: 30px;
   }
+
+.search-form-field {
+  width: 200px;
+  padding-top: 20px;
+}
