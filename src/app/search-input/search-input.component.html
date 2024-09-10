@@ -18,5 +18,14 @@
         <mat-card-actions>
           <button mat-button (click)="search()" >Search</button>
         </mat-card-actions>
+      <mat-card-content *ngIf="apiResponse">
+        <mat-list *ngFor="let book of apiResponse.docs">
+          <mat-list-item>Title: {{book.title}}</mat-list-item>
+          <mat-list-item>Author: {{book.author_name}}</mat-list-item>
+          <mat-list-item>Publish Date: {{book.first_publish_year}}</mat-list-item>
+          <mat-divider></mat-divider>
+        </mat-list>
+
+      </mat-card-content>
     </mat-card>
 </div>

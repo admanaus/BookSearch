@@ -6,6 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiHelperService {
 
+  titleSearchResponse: any;
+
   //add HttpClient to the constructor
   constructor(private http: HttpClient) { }
 
@@ -15,6 +17,14 @@ export class ApiHelperService {
 
   getApiUrlWithQuery(query: string): string {
     return this.getApiUrl() + query;
+  }
+
+  getCachedTitleSearchResponse() {
+    return this.titleSearchResponse;
+  }
+
+  setCachedTitleSearchResponse(response: any) {
+    this.titleSearchResponse = response;
   }
 
   //search for a book based on the title using Angular HTTP GET
